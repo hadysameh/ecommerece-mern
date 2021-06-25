@@ -1,9 +1,10 @@
 const jwt = require('jsonwebtoken')
 const UserModel = require('./../models/User')
 const isAuth = (req,res,next)=>{
-    
-    const token = req.headers.authorization.replace('Bearer ','')
-    jwt.verify(token, process.env.jwtSecret, function(err, decoded) {
+    let token
+    if(req.headers.authorization){
+        token = req.headers.authorization.replace('Bearer ','')
+        jwt.verify(token, process.env.jwtSecret, function(err, decoded) {
         
         UserModel.checkIfEmailExists(decoded.email,(isEmailExist,user)=>{
             if(isEmailExist){
@@ -11,11 +12,18 @@ const isAuth = (req,res,next)=>{
                 next()
             }else{
                 res.json({
-                    isUser:isEmailExist
+                    // isUser:isEmailExist
+                    status:'unauthorized'
                 })
             }
         })
       });
+    }
+    else{
+        res.status(403).json({
+            status:'unauthorized'
+        });
+    }
 }
 
 module.exports=isAuth

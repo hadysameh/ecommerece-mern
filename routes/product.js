@@ -6,11 +6,11 @@ const upload = require('./../middelware/upload')
 
 
 
-router.get('/product/',isAuth,ProductsController.index)
+router.get('/product/',ProductsController.index)
 router.get('/product/show/',ProductsController.show)
-router.patch('/product/edit/',[isAuth,isAdmin],ProductsController.edit)
-router.post('/product/',[isAuth,isAdmin], upload.single('img'),ProductsController.store)
-router.delete('/product/',[isAuth,isAdmin],ProductsController.delete)
+router.patch('/product/edit/',[isAuth,isAdmin], upload.single('img'),ProductsController.edit)
+router.post('/product/store',[isAuth,isAdmin], upload.single('img'),ProductsController.store)
+router.delete('/product/delete',[isAuth,isAdmin],ProductsController.delete)
 
 
 module.exports=router
