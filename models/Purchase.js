@@ -4,12 +4,12 @@ const schema = mongoose.schema
 
 const purchaseschema = new schema({
     product:{
-        type: Mixed,
-        required:true
-    },
-    user:{
         type: Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'Product'
+    },
+    users:{
+        type: Array,
+        required:true
     }
 },
 {

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const schema = mongoose.schema
+const schema = mongoose.Schema
 
 const categoryschema = new schema({
     categoryName:{
@@ -12,4 +12,5 @@ const categoryschema = new schema({
     timestamps:true
 })
 
+categoryschema.index({ categoryName: 1 }); 
 module.exports = Category = mongoose.model('Category',categoryschema)
