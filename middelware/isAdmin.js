@@ -1,6 +1,7 @@
 const isAdmin= (req,res,next)=>{
+    // console.log(req.user)
     if(req.user.isAdmin){
-        next()
+         next()
     }
     else{
         res.json({

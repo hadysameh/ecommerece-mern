@@ -18,7 +18,8 @@ const productSchema = new schema({
         type:Number,
         min: 0,
         max: 90,
-        required:true
+        default:0,
+        // required:true
     },
     count:{
         type:Number,
@@ -27,7 +28,7 @@ const productSchema = new schema({
     },
     salesNumber:{
         type:Number,
-        
+        default:0,
         min:0
     },
     discription :{

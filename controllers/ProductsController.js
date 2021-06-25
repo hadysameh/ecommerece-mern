@@ -37,8 +37,9 @@ class ProductsController{
         res.json(product)
     }
     static async store(req,res){
+        console.log(req.body)
         let product_img = req.file.path;
-        let product = new Product({...req.body.product,img:product_img})
+        let product = new Product({...req.body,img:product_img})
         let saved_product = await product.save()
         res.json(saved_product)
 
