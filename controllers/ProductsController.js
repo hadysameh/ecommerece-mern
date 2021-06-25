@@ -38,7 +38,7 @@ class ProductsController{
     }
     //show works fine
     static async show(req,res){
-        let product = await Product.findOne({_id:req.body.product_id}).exec()
+        let product = await Product.findOne({_id:req.body.id}).exec()
         res.send(product)
     }
     //edit works fine
