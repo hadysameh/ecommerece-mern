@@ -6,7 +6,7 @@ const upload = require('./../middelware/upload')
 
 
 
-router.get('/product/',ProductsController.index)
+router.get('/product/',isAuth,ProductsController.index)
 router.get('/product/show/',ProductsController.show)
 router.patch('/product/edit/',[isAuth,isAdmin],ProductsController.edit)
 router.post('/product/',[isAuth,isAdmin], upload.single('img'),ProductsController.store)

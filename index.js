@@ -16,7 +16,7 @@ app.get('/',(req,res)=>{
 })
 
 initializeRoutes(app)
-
+mongoose.set('useCreateIndex', true);
 mongoose.connect(process.env.mongodbConnectionStr,
 { useNewUrlParser: true ,useUnifiedTopology: true}
 )

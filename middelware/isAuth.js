@@ -1,10 +1,13 @@
 const jwt = require('jsonwebtoken')
 const UserModel = require('./../models/User')
 const isAuth = (req,res,next)=>{
+    console.log(req.headers.authorization.replace('Bearer ',''))
+    const token = req.headers.authorization.replace('Bearer ','')
     jwt.verify(token, process.env.jwtSecret, function(err, decoded) {
-        UserModel.checkIfEmailExists(decoded,(isEmailExist,user)=>{
+        console.log(decoded)
+        UserModel.checkIfEmailExists(decoded.email,(isEmailExist,user)=>{
             if(isEmailExist){
-                req.user=user
+                req.user=user            
                 next()
             }else{
                 res.json({
