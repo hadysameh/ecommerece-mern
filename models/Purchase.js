@@ -7,8 +7,8 @@ const purchaseschema = new schema({
         type: Schema.Types.ObjectId,
         ref: 'Product'
     },
-    users:{
-        type: Array,
+    user:{
+        type: Mixed,
         required:true
     }
 },

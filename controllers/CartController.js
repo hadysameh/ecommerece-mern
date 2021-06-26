@@ -1,12 +1,22 @@
-
+const Cart  = require('./../models/Cart')
 class CartController{
-    static index(){
-
+    static async index(){
+        let cartProducts = await Cart.find().skip((req.body.page-1)*36).limit(36).exec()
+        res.json(cartProducts)
     }    
     static store(){
-        
+        let cartRecord = new Cart({
+            product:req.body.product,
+            user:req.user._id
+        })
+
+        let savedCartRecord = await cartRecord.save()
+        res.json(savedCartRecord)
+
     }
     static delete(){
-        
+        const removedCartRecord = await Cart.deleteOne({_id:req.body.id}).exec();
+        res.json(removedCartRecord);
     }
 }
+module.exports=CartController
