@@ -63,6 +63,13 @@ class UserController{
             }
         })
     }
+
+    static logout(req,res){
+        res.status(200).send({
+            user:null,
+            token:null
+        });
+    }
 }
 
 module.exports=UserController
