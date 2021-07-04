@@ -7,7 +7,19 @@ let userSchema = new schema({
         type:String,
         required:true
     },
-    lasttName :{
+    lastName :{
+        type:String,
+        required:true
+    },
+    address :{
+        type:String,
+        required:true
+    },
+    country :{
+        type:String,
+        required:true
+    },
+    state :{
         type:String,
         required:true
     },

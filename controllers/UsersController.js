@@ -31,37 +31,51 @@ class UserController{
 
     static register(req,res){
         // console.log(req.body)
-        User.checkIfEmailExists(req.body.email,(isEmailExists,user)=>{
+        
+
+            User.checkIfEmailExists(req.body.email,(isEmailExists,user)=>{
             if(isEmailExists){
                 res.status(400).json({status:'this email is already registered please login'});
             }
             else{
-                if(req.body.password==req.body.repassword){
-                    // console.log('tring to register')
-                    const newUser = new User({
-                        email:req.body.email,
-                        password:req.body.password
-                    })
-                    // console.log(newUser)
-                    let token =jwt.sign({email:req.body.email},process.env.jwtSecret)
-                    // console.log('token created')
-                    // console.log(token)
-                    newUser.save().then(user=>{
-                        // console.log('tring to save new user')
-                        res.json({
-                            user,
-                            token
+                
+                    if(req.body.password==req.body.repassword){
+                        // console.log('tring to register')
+                        const newUser = new User({
+                            firstName:req.body.firstName,
+                            lastName:req.body.lastName,
+                            email:req.body.email,
+                            password:req.body.password
                         })
-                    })
-                }
-                else{
-                    res.json({
-                        status:'please re-enter the correct password'
-                    })
-                }
+                        // console.log(newUser)
+                        let token =jwt.sign({email:req.body.email},process.env.jwtSecret)
+                        // console.log('token created')
+                        // console.log(token)
+                        newUser.save()
+                        .then(user=>{
+                            // console.log('tring to save new user')
+                            res.json({
+                                user,
+                                token
+                            })
+                        })
+                        .catch(err=>{
+                            res.send(err)
+                        }) 
+                            
+                        
+                    }
+                    else{
+                        res.json({
+                            status:'please re-enter the correct password'
+                        })
+                    }
+                
+                
                 
             }
         })
+        
     }
 
     static logout(req,res){

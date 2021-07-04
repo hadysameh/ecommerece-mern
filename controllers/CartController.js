@@ -4,7 +4,7 @@ class CartController{
         let cartProducts = await Cart.find().skip((req.body.page-1)*36).limit(36).exec()
         res.json(cartProducts)
     }    
-    static store(){
+    static async store(){
         let cartRecord = new Cart({
             product:req.body.product,
             user:req.user._id
@@ -14,7 +14,7 @@ class CartController{
         res.json(savedCartRecord)
 
     }
-    static delete(){
+    static async delete(){
         const removedCartRecord = await Cart.deleteOne({_id:req.body.id}).exec();
         res.json(removedCartRecord);
     }

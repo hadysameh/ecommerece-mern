@@ -4,7 +4,9 @@
   "description": "authentication system\u001b[Hbb\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Cbasic authenticaton system",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "front": "cd client && npm start",
+    "back": "nodemon index.js",
+    "dev": "concurrently \"npm run back\" \"npm run front\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -12,11 +14,13 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.0",
     "bcrypt": "^5.0.1",
+    "concurrently": "^6.2.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.13",
-    "multer": "^1.4.2"
+    "multer": "^1.4.2",
+    "stripe": "^8.159.0"
   }
 }
