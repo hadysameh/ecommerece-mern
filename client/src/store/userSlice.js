@@ -18,6 +18,9 @@ export const userSlice = createSlice({
         test:(state,action)=>{
             state.test=action.payload
             console.log(state.test)
+        },
+        isAuthenticated(state){
+            return state.token && state.user
         }
     }
 })

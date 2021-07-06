@@ -1,5 +1,6 @@
 import {BrowserRouter as Router , Route ,Switch} from 'react-router-dom';
 import Header from './../component/Header'
+import Footer from './../component/Footer'
 import Register from './../pages/register'
 import Login from './../pages/login'
  let routes = (
@@ -24,6 +25,7 @@ import Login from './../pages/login'
                 
 
             </Switch>
+        <Footer></Footer>
     </Router>
 )
 export default routes
