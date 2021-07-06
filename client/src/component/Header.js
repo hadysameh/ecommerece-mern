@@ -3,43 +3,43 @@ export default function Header(){
     return (
     <header id="header">
         
-        <div class="header-banner">
+        <div className="header-banner">
         </div>
-        <nav class="header-nav">
-        <div class="container">
-        <div class="hidden-md-down">
+        <nav className="header-nav">
+        <div className="container">
+        <div className="hidden-md-down">
         </div>
         </div>
-        <div class="container">
-        <div class="hidden-lg-up  mobile">
+        <div className="container">
+        <div className="hidden-lg-up  mobile">
         <div id="_mobile_static"></div>
-        <div class="row row-mobile">
-        <div class="col-mobile col-md-4 col-xs-4">
-        <div class="float-xs-left" id="menu-icon">
-        <i class="ion-android-menu"></i>
+        <div className="row row-mobile">
+        <div className="col-mobile col-md-4 col-xs-4">
+        <div className="float-xs-left" id="menu-icon">
+        <i className="ion-android-menu"></i>
         </div>
-        <div id="mobile_top_menu_wrapper" class="row hidden-lg-up" style={{display:"none"}}>
-        <div class="top-header-mobile">
+        <div id="mobile_top_menu_wrapper" className="row hidden-lg-up" style={{display:"none"}}>
+        <div className="top-header-mobile">
         <div id="_mobile_compare"></div>
         <div id="_mobile_wishtlist"></div>
         </div>
         <div id="_mobile_currency_selector"></div>
         <div id="_mobile_language_selector"></div>
-        <div class="menu-close">
-        menu <i class="material-icons float-xs-right">arrow_back</i>
+        <div className="menu-close">
+        menu <i className="material-icons float-xs-right">arrow_back</i>
         </div>
-        <div class="menu-tabs">
-        <div class="js-top-menu-bottom">
+        <div className="menu-tabs">
+        <div className="js-top-menu-bottom">
         <div id="_mobile_megamenu"></div>
         <div id="_mobile_vegamenu"></div>
         </div>
         </div>
         </div>
         </div>
-        <div class="col-mobile col-md-4 col-xs-4 mobile-center">
-        <div class="top-logo" id="_mobile_logo"></div>
+        <div className="col-mobile col-md-4 col-xs-4 mobile-center">
+        <div className="top-logo" id="_mobile_logo"></div>
         </div>
-        <div class="col-mobile col-md-4 col-xs-4 mobile-right">
+        <div className="col-mobile col-md-4 col-xs-4 mobile-right">
         <div id="_mobile_cart_block"></div>
         <div id="_mobile_user_info"></div>
         </div>
@@ -48,57 +48,57 @@ export default function Header(){
         </div>
         </div>
         </nav>
-        <div class="header-top top_bg hidden-md-down">
-        <div class="container">
-        <div class="row">
-        <div class="col col col-md-2" id="_desktop_logo">
+        <div className="header-top top_bg hidden-md-down">
+        <div className="container">
+        <div className="row">
+        <div className="col col col-md-2" id="_desktop_logo">
         <a href="http://demo2.posthemes.com/pos_rozer/layout4/">
-        <img class="logo img-responsive" src="http://demo2.posthemes.com/pos_rozer/layout4/img/rozer4-logo-15858838744.jpg" alt="Rozer  Responsive Prestashop Theme"/>
+        <img className="logo img-responsive" src="http://demo2.posthemes.com/pos_rozer/layout4/img/rozer4-logo-15858838744.jpg" alt="Rozer  Responsive Prestashop Theme"/>
         </a>
         </div>
-        <div class=" col col-md-10 col-sm-12 position-static">
+        <div className=" col col-md-10 col-sm-12 position-static">
         <div id="_desktop_cart_block">
-        <div class="blockcart cart-preview" data-refresh-url="//demo2.posthemes.com/pos_rozer/layout4/en/module/ps_shoppingcart/ajax" data-cartitems="0">
-        <div class="button_cart">
-        <a rel="nofollow" href="http://demo2.posthemes.com/pos_rozer/layout4/en/cart?action=show" class="desktop hidden-md-down">
-        <span class="item_count">0</span>
-        <span class="item_total">$0.00</span>
+        <div className="blockcart cart-preview" data-refresh-url="//demo2.posthemes.com/pos_rozer/layout4/en/module/ps_shoppingcart/ajax" data-cartitems="0">
+        <div className="button_cart">
+        <a rel="nofollow" href="http://demo2.posthemes.com/pos_rozer/layout4/en/cart?action=show" className="desktop hidden-md-down">
+        <span className="item_count">0</span>
+        <span className="item_total">$0.00</span>
         </a>
-        <a rel="nofollow" href="http://demo2.posthemes.com/pos_rozer/layout4/en/cart?action=show" class="mobile hidden-lg-up">
-        <span class="item_count">0</span>
+        <a rel="nofollow" href="http://demo2.posthemes.com/pos_rozer/layout4/en/cart?action=show" className="mobile hidden-lg-up">
+        <span className="item_count">0</span>
         </a>
         </div>
-        <div class="popup_cart">
-        <div class="content-cart">
-        <div class="mini_cart_arrow"></div>
+        <div className="popup_cart">
+        <div className="content-cart">
+        <div className="mini_cart_arrow"></div>
         <ul>
         </ul>
-        <div class="price_content">
-        <div class="cart-subtotals">
-        <div class="products price_inline">
-        <span class="label">Subtotal</span>
-        <span class="value">$0.00</span>
+        <div className="price_content">
+        <div className="cart-subtotals">
+        <div className="products price_inline">
+        <span className="label">Subtotal</span>
+        <span className="value">$0.00</span>
         </div>
-        <div class=" price_inline">
-        <span class="label"></span>
-        <span class="value"></span>
+        <div className=" price_inline">
+        <span className="label"></span>
+        <span className="value"></span>
         </div>
-        <div class="shipping price_inline">
-        <span class="label">Shipping</span>
-        <span class="value">Free</span>
+        <div className="shipping price_inline">
+        <span className="label">Shipping</span>
+        <span className="value">Free</span>
         </div>
-        <div class="tax price_inline">
-        <span class="label">Taxes</span>
-        <span class="value">$0.00</span>
-        </div>
-        </div>
-        <div class="cart-total price_inline">
-        <span class="label">Total</span>
-        <span class="value">$0.00</span>
+        <div className="tax price_inline">
+        <span className="label">Taxes</span>
+        <span className="value">$0.00</span>
         </div>
         </div>
-        <div class="checkout">
-        <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/cart?action=show" class="btn btn-primary">Checkout</a>
+        <div className="cart-total price_inline">
+        <span className="label">Total</span>
+        <span className="value">$0.00</span>
+        </div>
+        </div>
+        <div className="checkout">
+        <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/cart?action=show" className="btn btn-primary">Checkout</a>
         </div>
         </div>
         </div>
@@ -115,17 +115,17 @@ export default function Header(){
             var isLoggedWishlist=false;
         </script>
         <div id="_desktop_wishtlist">
-        <div class="wishtlist_top">
-        <a class="" href="http://demo2.posthemes.com/pos_rozer/layout4/en/module/blockwishlist/mywishlist">
-        <i class="icon-heart"></i>
-        <span class="txt_wishlist">Wishlist</span>
-        (<span class="cart-wishlist-number">0</span>)
+        <div className="wishtlist_top">
+        <a className="" href="http://demo2.posthemes.com/pos_rozer/layout4/en/module/blockwishlist/mywishlist">
+        <i className="icon-heart"></i>
+        <span className="txt_wishlist">Wishlist</span>
+        (<span className="cart-wishlist-number">0</span>)
         </a>
         </div>
         </div><div id="_desktop_compare">
-        <div class="compare_top">
+        <div className="compare_top">
         <a href="http://demo2.posthemes.com/pos_rozer/layout4/module/poscompare/comparePage">
-        <i class="icon-shuffle"></i> <span>Compare (<span id="poscompare-nb"></span>)</span>
+        <i className="icon-shuffle"></i> <span>Compare (<span id="poscompare-nb"></span>)</span>
         </a>
         </div>
         </div>
@@ -133,14 +133,14 @@ export default function Header(){
             var baseDir ='/'; 
         </script>
 
-        <div id="_desktop_search_category" class="col-md-8 col-xs-12">
+        <div id="_desktop_search_category" className="col-md-8 col-xs-12">
             <div id="pos_search_top">
-            <form method="get" action="http://demo2.posthemes.com/pos_rozer/layout4/en/search" id="searchbox" class="form-inline form_search show-categories" data-search-controller-url="/pos_rozer/layout4/modules/possearchproducts/SearchProducts.php">
+            <form method="get" action="http://demo2.posthemes.com/pos_rozer/layout4/en/search" id="searchbox" className="form-inline form_search show-categories" data-search-controller-url="/pos_rozer/layout4/modules/possearchproducts/SearchProducts.php">
                     
                 <label for="pos_query_top"></label>
                 <input type="hidden" name="controller" value="search"/>
-                <div class="pos_search form-group">
-                <select class="bootstrap-select" name="poscats">
+                <div className="pos_search form-group">
+                <select className="bootstrap-select" name="poscats">
                 <option value="0">All categories</option>
                 <option value="68">
                 Electronics
@@ -252,35 +252,35 @@ export default function Header(){
                 </option>
                 </select>
                 </div>
-                <input type="text" name="s" value="" placeholder="Enter your search key ... " id="pos_query_top" class="search_query form-control ac_input"/>
-                <button type="submit" class="btn btn-default search_submit">
-                <i class="icon-magnifier"></i>
+                <input type="text" name="s" value="" placeholder="Enter your search key ... " id="pos_query_top" className="search_query form-control ac_input"/>
+                <button type="submit" className="btn btn-default search_submit">
+                <i className="icon-magnifier"></i>
                 </button>
             </form>
             </div>
         </div>
 
         <div id="_desktop_user_info">
-        <div class="user-info-block selector-block">
-        <div class="currency-selector localiz_block dropdown js-dropdown">
-        <button data-target="#" data-toggle="dropdown" class=" btn-unstyle hidden-md-down">
-            <i class="icon-user"></i>
+        <div className="user-info-block selector-block">
+        <div className="currency-selector localiz_block dropdown js-dropdown">
+        <button data-target="#" data-toggle="dropdown" className=" btn-unstyle hidden-md-down">
+            <i className="icon-user"></i>
         </button>
-        <button data-target="#" data-toggle="dropdown" class=" btn-unstyle hidden-lg-up">
-            <i class="icon-user"></i>
+        <button data-target="#" data-toggle="dropdown" className=" btn-unstyle hidden-lg-up">
+            <i className="icon-user"></i>
         </button>
 
-        <ul class="dropdown-menu">
+        <ul className="dropdown-menu">
             <li>
-                <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/my-account" rel="nofollow" class="dropdown-item">My account</a>
+                <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/my-account" rel="nofollow" className="dropdown-item">My account</a>
             </li>
             
             <li>
-            <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/cart?action=show" class="dropdown-item">Checkout</a>
+            <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/cart?action=show" className="dropdown-item">Checkout</a>
             </li>
 
             <li>
-            <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/my-account" title="Log in to your customer account" rel="nofollow" class="dropdown-item">
+            <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/my-account" title="Log in to your customer account" rel="nofollow" className="dropdown-item">
             <span>Sign in</span>
             </a>
             </li>
@@ -295,26 +295,26 @@ export default function Header(){
         </div>
         </div>
         </div>
-            <div class="header-bottom  hidden-md-down">
-            <div class="container">
-            <div class="row">
-            <div class="col col-sm-12 col-lg-3 col-xl-2">
+            <div className="header-bottom  hidden-md-down">
+            <div className="container">
+            <div className="row">
+            <div className="col col-sm-12 col-lg-3 col-xl-2">
             <div id="_desktop_vegamenu">
-            <div class="pos-menu-vertical" data-more-less="9">
-            <h3 class="title_vertical hidden-md-down">All Cattegories </h3>
-            <ul class="menu-content">
-            <li class="menu-item menu-item3  hasChild ">
+            <div className="pos-menu-vertical" data-more-less="9">
+            <h3 className="title_vertical hidden-md-down">All Cattegories </h3>
+            <ul className="menu-content">
+            <li className="menu-item menu-item3  hasChild ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/68-electronics">
             <span>Electronics</span>
-            <i class="hidden-md-down icon_sub ion-ios-arrow-right"></i> </a>
-            <span class="icon-drop-mobile"><i class="material-icons add">add </i><i class="material-icons remove">remove </i></span> <div class="pos-sub-menu menu-dropdown col-xs-12 col-lg-  menu_noanimation">
-            <div class="popup_vertical">
-            <div class="pos-menu-row row ">
-            <div class="pos-menu-col col-xs-12 col-lg-4  ">
-            <ul class="ul-column ">
-            <li class="submenu-item ">
+            <i className="hidden-md-down icon_sub ion-ios-arrow-right"></i> </a>
+            <span className="icon-drop-mobile"><i className="material-icons add">add </i><i className="material-icons remove">remove </i></span> <div className="pos-sub-menu menu-dropdown col-xs-12 col-lg-  menu_noanimation">
+            <div className="popup_vertical">
+            <div className="pos-menu-row row ">
+            <div className="pos-menu-col col-xs-12 col-lg-4  ">
+            <ul className="ul-column ">
+            <li className="submenu-item ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/69-accessories-parts">Accessories &amp; Parts</a>
-            <span class="icon-drop-mobile"><i class="material-icons add">add </i><i class="material-icons remove">remove </i></span> <ul class="category-sub-menu">
+            <span className="icon-drop-mobile"><i className="material-icons add">add </i><i className="material-icons remove">remove </i></span> <ul className="category-sub-menu">
             <li>
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/75-cables-adapters">Cables &amp; Adapters</a>
             </li>
@@ -332,9 +332,9 @@ export default function Header(){
             </li>
             </ul>
             </li>
-            <li class="submenu-item ">
+            <li className="submenu-item ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/70-audio-video">Audio &amp; Video</a>
-            <span class="icon-drop-mobile"><i class="material-icons add">add </i><i class="material-icons remove">remove </i></span> <ul class="category-sub-menu">
+            <span className="icon-drop-mobile"><i className="material-icons add">add </i><i className="material-icons remove">remove </i></span> <ul className="category-sub-menu">
             <li>
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/80-televisions">Televisions</a>
             </li>
@@ -354,11 +354,11 @@ export default function Header(){
             </li>
             </ul>
             </div>
-            <div class="pos-menu-col col-xs-12 col-lg-4  ">
-            <ul class="ul-column ">
-            <li class="submenu-item ">
+            <div className="pos-menu-col col-xs-12 col-lg-4  ">
+            <ul className="ul-column ">
+            <li className="submenu-item ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/71-camera-photo">Camera &amp; Photo</a>
-            <span class="icon-drop-mobile"><i class="material-icons add">add </i><i class="material-icons remove">remove </i></span> <ul class="category-sub-menu">
+            <span className="icon-drop-mobile"><i className="material-icons add">add </i><i className="material-icons remove">remove </i></span> <ul className="category-sub-menu">
             <li>
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/85-digital-cameras">Digital Cameras</a>
             </li>
@@ -376,9 +376,9 @@ export default function Header(){
             </li>
             </ul>
             </li>
-            <li class="submenu-item ">
+            <li className="submenu-item ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/72-portable-audio-video">Portable Audio &amp; Video</a>
-            <span class="icon-drop-mobile"><i class="material-icons add">add </i><i class="material-icons remove">remove </i></span> <ul class="category-sub-menu">
+            <span className="icon-drop-mobile"><i className="material-icons add">add </i><i className="material-icons remove">remove </i></span> <ul className="category-sub-menu">
             <li>
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/90-headphones">Headphones</a>
             </li>
@@ -398,11 +398,11 @@ export default function Header(){
             </li>
             </ul>
             </div>
-            <div class="pos-menu-col col-xs-12 col-lg-4  ">
-            <ul class="ul-column ">
-            <li class="submenu-item ">
+            <div className="pos-menu-col col-xs-12 col-lg-4  ">
+            <ul className="ul-column ">
+            <li className="submenu-item ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/73-smart-electronics">Smart Electronics</a>
-            <span class="icon-drop-mobile"><i class="material-icons add">add </i><i class="material-icons remove">remove </i></span> <ul class="category-sub-menu">
+            <span className="icon-drop-mobile"><i className="material-icons add">add </i><i className="material-icons remove">remove </i></span> <ul className="category-sub-menu">
             <li>
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/95-wearable-devices">Wearable Devices</a>
             </li>
@@ -420,7 +420,7 @@ export default function Header(){
             </li>
             </ul>
             </li>
-            <li class="submenu-item ">
+            <li className="submenu-item ">
             <a href="#"><img src="http://demo2.posthemes.com/pos_rozer/layout4/img/cms/banner-vega.jpg" alt="" /></a>
             </li>
             </ul>
@@ -429,48 +429,48 @@ export default function Header(){
             </div>
             </div>
             </li>
-            <li class="menu-item menu-item4  hasChild ">
+            <li className="menu-item menu-item4  hasChild ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/74-video-games">
             <span>Video Games</span>
-            <i class="hidden-md-down icon_sub ion-ios-arrow-right"></i> </a>
-            <span class="icon-drop-mobile"><i class="material-icons add">add</i><i class="material-icons remove">remove </i></span><ul class="menu-dropdown cat-drop-menu menu_noanimation"><li><a href="http://demo2.posthemes.com/pos_rozer/layout4/en/100-handheld-game-players" class=""><span>Handheld Game Players</span></a></li><li><a href="http://demo2.posthemes.com/pos_rozer/layout4/en/101-game-controllers" class=""><span>Game Controllers</span></a></li><li><a href="http://demo2.posthemes.com/pos_rozer/layout4/en/102-joysticks" class=""><span>Joysticks</span></a></li><li><a href="http://demo2.posthemes.com/pos_rozer/layout4/en/103-stickers" class=""><span>Stickers</span></a></li></ul>
+            <i className="hidden-md-down icon_sub ion-ios-arrow-right"></i> </a>
+            <span className="icon-drop-mobile"><i className="material-icons add">add</i><i className="material-icons remove">remove </i></span><ul className="menu-dropdown cat-drop-menu menu_noanimation"><li><a href="http://demo2.posthemes.com/pos_rozer/layout4/en/100-handheld-game-players" className=""><span>Handheld Game Players</span></a></li><li><a href="http://demo2.posthemes.com/pos_rozer/layout4/en/101-game-controllers" className=""><span>Game Controllers</span></a></li><li><a href="http://demo2.posthemes.com/pos_rozer/layout4/en/102-joysticks" className=""><span>Joysticks</span></a></li><li><a href="http://demo2.posthemes.com/pos_rozer/layout4/en/103-stickers" className=""><span>Stickers</span></a></li></ul>
             </li>
-            <li class="menu-item menu-item5   ">
+            <li className="menu-item menu-item5   ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/80-televisions">
             <span>Televisions</span>
             </a>
             </li>
-            <li class="menu-item menu-item6   ">
+            <li className="menu-item menu-item6   ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/85-digital-cameras">
             <span>Digital Cameras</span>
             </a>
             </li>
-            <li class="menu-item menu-item7   ">
+            <li className="menu-item menu-item7   ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/90-headphones">
             <span> Headphones</span>
             </a>
             </li>
-            <li class="menu-item menu-item8   ">
+            <li className="menu-item menu-item8   ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/95-wearable-devices">
             <span> Wearable Devices</span>
             </a>
             </li>
-            <li class="menu-item menu-item9   ">
+            <li className="menu-item menu-item9   ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/98-smart-watches">
             <span> Smart Watches</span>
             </a>
             </li>
-            <li class="menu-item menu-item10   ">
+            <li className="menu-item menu-item10   ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/101-game-controllers">
             <span> Game Controllers</span>
             </a>
             </li>
-            <li class="menu-item menu-item11   ">
+            <li className="menu-item menu-item11   ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/96-smart-home-appliances">
             <span> Smart Home Appliances</span>
             </a>
             </li>
-            <li class="menu-item menu-item12   ">
+            <li className="menu-item menu-item12   ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/82-projectors">
             <span>Projectors</span>
             </a>
@@ -479,31 +479,31 @@ export default function Header(){
             </div>
             </div>
             </div>
-            <div class=" col col-sm-12 col-lg-9 col-xl-10">
-            <div id="_desktop_megamenu" class="use-sticky ">
-            <div class="pos-menu-horizontal">
-            <ul class="menu-content">
-            <li class="home menu-item menu-item1   ">
+            <div className=" col col-sm-12 col-lg-9 col-xl-10">
+            <div id="_desktop_megamenu" className="use-sticky ">
+            <div className="pos-menu-horizontal">
+            <ul className="menu-content">
+            <li className="home menu-item menu-item1   ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/">
             <span>Home</span>
             </a>
             </li>
-            <li class=" menu-item menu-item3   ">
+            <li className=" menu-item menu-item3   ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/new-products">
             <span>New products</span>
-            <span class="menu-subtitle">New</span> </a>
+            <span className="menu-subtitle">New</span> </a>
             </li>
-            <li class=" menu-item menu-item4   ">
+            <li className=" menu-item menu-item4   ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/best-sales">
             <span>Best sales</span>
             </a>
             </li>
-            <li class=" menu-item menu-item5   ">
+            <li className=" menu-item menu-item5   ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/prices-drop">
             <span>Prices drop</span>
-            <span class="menu-subtitle">Sale</span> </a>
+            <span className="menu-subtitle">Sale</span> </a>
             </li>
-            <li class=" menu-item menu-item6   ">
+            <li className=" menu-item menu-item6   ">
             <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/contact-us">
             <span>Contact us</span>
             </a>
@@ -511,72 +511,72 @@ export default function Header(){
             </ul>
             </div>
             </div><div id="_desktop_language_selector">
-            <div class="language-selector-wrapper selector-block hidden-md-down">
-            <span id="language-selector-label" class=" selector-label hidden-lg-down">Language :</span>
-            <div class="language-selector localiz_block  dropdown js-dropdown">
-            <button data-toggle="dropdown" class=" btn-unstyle" aria-haspopup="true" aria-expanded="false" aria-label="Language dropdown">
+            <div className="language-selector-wrapper selector-block hidden-md-down">
+            <span id="language-selector-label" className=" selector-label hidden-lg-down">Language :</span>
+            <div className="language-selector localiz_block  dropdown js-dropdown">
+            <button data-toggle="dropdown" className=" btn-unstyle" aria-haspopup="true" aria-expanded="false" aria-label="Language dropdown">
             <img src="http://demo2.posthemes.com/pos_rozer/layout4/img/l/1.jpg" alt="" width="16" height="11" />
-            <span class="expand-more">English</span>
-            <i class="material-icons">expand_more</i>
+            <span className="expand-more">English</span>
+            <i className="material-icons">expand_more</i>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="language-selector-label">
-            <li class="current">
-            <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/login?back=my-account" class="dropdown-item"><img src="http://demo2.posthemes.com/pos_rozer/layout4/img/l/1.jpg" alt="" width="16" height="11" />English</a>
+            <ul className="dropdown-menu" aria-labelledby="language-selector-label">
+            <li className="current">
+            <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/login?back=my-account" className="dropdown-item"><img src="http://demo2.posthemes.com/pos_rozer/layout4/img/l/1.jpg" alt="" width="16" height="11" />English</a>
             </li>
             <li>
-            <a href="http://demo2.posthemes.com/pos_rozer/layout4/fr/connexion?back=my-account" class="dropdown-item"><img src="http://demo2.posthemes.com/pos_rozer/layout4/img/l/2.jpg" alt="" width="16" height="11" />Français</a>
+            <a href="http://demo2.posthemes.com/pos_rozer/layout4/fr/connexion?back=my-account" className="dropdown-item"><img src="http://demo2.posthemes.com/pos_rozer/layout4/img/l/2.jpg" alt="" width="16" height="11" />Français</a>
             </li>
             </ul>
             </div>
             </div>
-            <div class="language-selector-wrapper hidden-lg-up">
-            <div class="selector-mobile dropdown js-dropdown">
-            <button data-toggle="dropdown" class=" btn-unstyle" aria-haspopup="true" aria-expanded="false" aria-label="Language dropdown">
+            <div className="language-selector-wrapper hidden-lg-up">
+            <div className="selector-mobile dropdown js-dropdown">
+            <button data-toggle="dropdown" className=" btn-unstyle" aria-haspopup="true" aria-expanded="false" aria-label="Language dropdown">
             <img src="http://demo2.posthemes.com/pos_rozer/layout4/img/l/1.jpg" alt="" width="16" height="11" />
-            <span class="expand-more">English</span>
-            <i class="material-icons">expand_more</i>
+            <span className="expand-more">English</span>
+            <i className="material-icons">expand_more</i>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="language-selector-label">
-            <li class="current">
-            <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/login?back=my-account" class="dropdown-item"><img src="http://demo2.posthemes.com/pos_rozer/layout4/img/l/1.jpg" alt="" width="16" height="11" />English</a>
+            <ul className="dropdown-menu" aria-labelledby="language-selector-label">
+            <li className="current">
+            <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/login?back=my-account" className="dropdown-item"><img src="http://demo2.posthemes.com/pos_rozer/layout4/img/l/1.jpg" alt="" width="16" height="11" />English</a>
             </li>
             <li>
-            <a href="http://demo2.posthemes.com/pos_rozer/layout4/fr/connexion?back=my-account" class="dropdown-item"><img src="http://demo2.posthemes.com/pos_rozer/layout4/img/l/2.jpg" alt="" width="16" height="11" />Français</a>
+            <a href="http://demo2.posthemes.com/pos_rozer/layout4/fr/connexion?back=my-account" className="dropdown-item"><img src="http://demo2.posthemes.com/pos_rozer/layout4/img/l/2.jpg" alt="" width="16" height="11" />Français</a>
             </li>
             </ul>
             </div>
             </div>
             </div>
             <div id="_desktop_currency_selector">
-            <div class="currency-selector-wrapper selector-block hidden-md-down">
-            <span id="currency-selector-label" class=" selector-label hidden-lg-down">Currency :</span>
-            <div class="currency-selector localiz_block dropdown js-dropdown">
-            <button data-target="#" data-toggle="dropdown" class=" btn-unstyle" aria-haspopup="true" aria-expanded="false" aria-label="Currency dropdown">
-            <span class="expand-more _gray-darker">USD $</span>
-            <i class="material-icons">expand_more</i>
+            <div className="currency-selector-wrapper selector-block hidden-md-down">
+            <span id="currency-selector-label" className=" selector-label hidden-lg-down">Currency :</span>
+            <div className="currency-selector localiz_block dropdown js-dropdown">
+            <button data-target="#" data-toggle="dropdown" className=" btn-unstyle" aria-haspopup="true" aria-expanded="false" aria-label="Currency dropdown">
+            <span className="expand-more _gray-darker">USD $</span>
+            <i className="material-icons">expand_more</i>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="currency-selector-label">
+            <ul className="dropdown-menu" aria-labelledby="currency-selector-label">
             <li>
-            <a title="Euro" rel="nofollow" href="http://demo2.posthemes.com/pos_rozer/layout4/en/login?back=my-account&amp;SubmitCurrency=1&amp;id_currency=2" class="dropdown-item">EUR €</a>
+            <a title="Euro" rel="nofollow" href="http://demo2.posthemes.com/pos_rozer/layout4/en/login?back=my-account&amp;SubmitCurrency=1&amp;id_currency=2" className="dropdown-item">EUR €</a>
             </li>
-            <li class="current">
-            <a title="US Dollar" rel="nofollow" href="http://demo2.posthemes.com/pos_rozer/layout4/en/login?back=my-account&amp;SubmitCurrency=1&amp;id_currency=1" class="dropdown-item">USD $</a>
+            <li className="current">
+            <a title="US Dollar" rel="nofollow" href="http://demo2.posthemes.com/pos_rozer/layout4/en/login?back=my-account&amp;SubmitCurrency=1&amp;id_currency=1" className="dropdown-item">USD $</a>
             </li>
             </ul>
             </div>
             </div>
-            <div class="currency-selector-wrapper hidden-lg-up">
-            <div class="selector-mobile dropdown js-dropdown">
-            <button data-target="#" data-toggle="dropdown" class=" btn-unstyle" aria-haspopup="true" aria-expanded="false" aria-label="Currency dropdown">
-            <span class="expand-more _gray-darker">USD $</span>
-            <i class="material-icons">expand_more</i>
+            <div className="currency-selector-wrapper hidden-lg-up">
+            <div className="selector-mobile dropdown js-dropdown">
+            <button data-target="#" data-toggle="dropdown" className=" btn-unstyle" aria-haspopup="true" aria-expanded="false" aria-label="Currency dropdown">
+            <span className="expand-more _gray-darker">USD $</span>
+            <i className="material-icons">expand_more</i>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="currency-selector-label">
+            <ul className="dropdown-menu" aria-labelledby="currency-selector-label">
             <li>
-            <a title="Euro" rel="nofollow" href="http://demo2.posthemes.com/pos_rozer/layout4/en/login?back=my-account&amp;SubmitCurrency=1&amp;id_currency=2" class="dropdown-item">EUR €</a>
+            <a title="Euro" rel="nofollow" href="http://demo2.posthemes.com/pos_rozer/layout4/en/login?back=my-account&amp;SubmitCurrency=1&amp;id_currency=2" className="dropdown-item">EUR €</a>
             </li>
-            <li class="current">
-            <a title="US Dollar" rel="nofollow" href="http://demo2.posthemes.com/pos_rozer/layout4/en/login?back=my-account&amp;SubmitCurrency=1&amp;id_currency=1" class="dropdown-item">USD $</a>
+            <li className="current">
+            <a title="US Dollar" rel="nofollow" href="http://demo2.posthemes.com/pos_rozer/layout4/en/login?back=my-account&amp;SubmitCurrency=1&amp;id_currency=1" className="dropdown-item">USD $</a>
             </li>
             </ul>
             </div>

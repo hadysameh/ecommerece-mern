@@ -18,12 +18,12 @@ class UserController{
                         });
                     }
                     else{
-                        res.status(400).json({status:'wrong password'});
+                        res.status(400).json({msg:'wrong password'});
                     }
                 })
             }
             else{
-                res.status(400).json({status:'email was not found please regiser first'});
+                res.status(400).json({msg:'email was not found please register first'});
             }
         })
         
@@ -35,17 +35,22 @@ class UserController{
 
             User.checkIfEmailExists(req.body.email,(isEmailExists,user)=>{
             if(isEmailExists){
-                res.status(400).json({status:'this email is already registered please login'});
+                res.status(400).json({msg:'this email is already registered please login'});
+                // res.json({status:'this email is already registered please login'});
+
             }
             else{
                 
                     if(req.body.password==req.body.repassword){
                         // console.log('tring to register')
+                        // const newUser = new User({
+                        //     firstName:req.body.firstName,
+                        //     lastName:req.body.lastName,
+                        //     email:req.body.email,
+                        //     password:req.body.password
+                        // })
                         const newUser = new User({
-                            firstName:req.body.firstName,
-                            lastName:req.body.lastName,
-                            email:req.body.email,
-                            password:req.body.password
+                            ...req.body
                         })
                         // console.log(newUser)
                         let token =jwt.sign({email:req.body.email},process.env.jwtSecret)
@@ -83,6 +88,10 @@ class UserController{
             user:null,
             token:null
         });
+    }
+
+    static isAuth(req,res){
+
     }
 }
 

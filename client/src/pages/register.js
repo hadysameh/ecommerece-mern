@@ -1,154 +1,230 @@
-const React , { Component } = require("react");
-
-export class register extends Component{
-
+import React, { Component } from 'react'
+import store from './../store/store'
+import { Route , Link,withRouter} from 'react-router-dom';
+import { setUser, setToken ,test} from './../store/userSlice'
+import axios from 'axios';
+class register extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            firstName:'',
+            lastName:'',
+            address:'',
+            country:'',
+            state:'',
+            email:'',
+            password:'',
+            repassword:'',
+            error:''
+        }
+      }
+    componentDidMount(){
+        
+        
+    } 
+    onChange=(e)=>{
+        this.setState({[e.target.name]:e.target.value})
+    }
+    onSubmit = (e)=>{
+        e.preventDefault();
+        
+        axios.post('/api/user/register',{...this.state})
+        .then((res)=>{
+            // console.log(res)
+            store.dispatch(setToken(res.data.token))
+            store.dispatch(setUser(res.data.user))
+            this.props.history.push('/');
+        } )
+        .catch( (error)=> {
+            if (error.response) {
+            //   console.log(error.response.data);
+              this.setState({error:error.response.data.msg})
+            //   console.log(error.response.status);
+            //   console.log(error.response.headers);
+            }
+          });
+    }
     render(){
         return (
-            <main>
-                <section id="content" class="page-content card card-block">
-                    <section class="register-form">
-                        <p>Already have an account? <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/login">Log in instead!</a></p>
-                        <form action="http://demo2.posthemes.com/pos_rozer/layout4/en/login?create_account=1" id="customer-form" class="js-customer-form" method="post">
-                        <section>
-                        <div class="form-group row ">
-                        <label class="col-md-3 form-control-label">
-                        Social title
-                        </label>
-                        <div class="col-md-6 form-control-valign">
-                        <label class="radio-inline">
-                        <span class="custom-radio">
-                        <input name="id_gender" type="radio" value="1"/>
-                        <span></span>
-                        </span>
-                        Mr.
-                        </label>
-                        <label class="radio-inline">
-                        <span class="custom-radio">
-                        <input name="id_gender" type="radio" value="2"/>
-                        <span></span>
-                        </span>
-                        Mrs.
-                        </label>
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                        </div>
-                        <div class="form-group row ">
-                        <label class="col-md-3 form-control-label required">
-                        First name
-                        </label>
-                        <div class="col-md-6">
-                        <input class="form-control" name="firstname" type="text" value="" required/>
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                        </div>
-                        <div class="form-group row ">
-                        <label class="col-md-3 form-control-label required">
-                        Last name
-                        </label>
-                        <div class="col-md-6">
-                        <input class="form-control" name="lastname" type="text" value="" required/>
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                        </div>
-                        <div class="form-group row ">
-                        <label class="col-md-3 form-control-label required">
-                        Email
-                        </label>
-                        <div class="col-md-6">
-                        <input class="form-control" name="email" type="email" value="" required/>
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                        </div>
-                        <div class="form-group row ">
-                        <label class="col-md-3 form-control-label required">
-                        Password
-                        </label>
-                        <div class="col-md-6">
-                        <div class="input-group js-parent-focus">
-                        <input class="form-control js-child-focus js-visible-password" name="password" type="password" value="" pattern=".{5,}" required/>
-                        <span class="input-group-btn">
-                        <button class="btn" type="button" data-action="show-password" data-text-show="Show" data-text-hide="Hide">
-                        Show
-                        </button>
-                        </span>
-                        </div>
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                        </div>
-                        <div class="form-group row ">
-                        <label class="col-md-3 form-control-label">
-                        Birthdate
-                        </label>
-                        <div class="col-md-6">
-                        <input class="form-control" name="birthday" type="text" value="" placeholder="MM/DD/YYYY"/>
-                        <span class="form-control-comment">
-                        (E.g.: 05/31/1970)
-                        </span>
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        Optional
-                        </div>
-                        </div>
-                        <div class="form-group row ">
-                        <label class="col-md-3 form-control-label">
-                        </label>
-                        <div class="col-md-6">
-                        <span class="custom-checkbox">
-                        <label>
-                        <input name="optin" type="checkbox" value="1"/>
-                        <span><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
-                        Receive offers from our partners
-                        </label>
-                        </span>
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                        </div>
-                        <div class="form-group row ">
-                        <label class="col-md-3 form-control-label">
-                        </label>
-                        <div class="col-md-6">
-                        <span class="custom-checkbox">
-                        <label>
-                        <input name="newsletter" type="checkbox" value="1"/>
-                        <span><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
-                        Sign up for our newsletter<br/><em>You may unsubscribe at any moment. For that purpose, please find our contact info in the legal notice.</em>
-                        </label>
-                        </span>
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                        </div>
-                        <div class="form-group row ">
-                        <label class="col-md-3 form-control-label required">
-                        </label>
-                        <div class="col-md-6">
-                        <span class="custom-checkbox">
-                        <label>
-                        <input name="psgdpr" type="checkbox" value="1" required/>
-                        <span><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
-                        I agree to the terms and conditions and the privacy policy
-                        </label>
-                        </span>
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                        </div>
-                        </section>
-                        <footer class="form-footer clearfix">
-                        <input type="hidden" name="submitCreate" value="1"/>
-                        <button class="btn btn-primary form-control-submit float-xs-right" data-link-action="save-customer" type="submit">
-                        Save
-                        </button>
-                        </footer>
+        <main>
+            <div id="wrapper">
+            <div className="container">
+            <div className="row">
+                <div id="content-wrapper" className="col-xs-12">
+            <section id="main">
+                <header className="page-header">
+                    <h1>
+                        Create an account
+                    </h1>
+                </header>
+                <section id="content" className="page-content card card-block">
+                    <section className="register-form">
+                        {/* <p>Already have an account? <a href="http://demo2.posthemes.com/pos_rozer/layout4/en/login">Log in instead!</a></p> */}
+                        <p>Already have an account? <Link to="/login">Log in instead!</Link></p>
+
+                            <form id="customer-form" className="js-customer-form" method="post" onSubmit={this.onSubmit}>
+                            <section>
+                                
+                                <div className="form-group row ">
+                                    <label className="col-md-3 form-control-label required">
+                                    First name
+                                    </label>
+                                    <div className="col-md-6">
+                                        <input value={this.state.firstName} 
+                                                onChange={this.onChange} 
+                                                className="form-control" 
+                                                name="firstName" type="text" 
+                                                required/>
+                                    </div>
+                                    <div className="col-md-3 form-control-comment">
+                                    </div>
+                                </div>
+                                <div className="form-group row ">
+                                    <label className="col-md-3 form-control-label required">
+                                    Last name
+                                    </label>
+                                    <div className="col-md-6">
+                                        <input 
+                                            value={this.state.lastName}
+                                            onChange={this.onChange} 
+                                            className="form-control" 
+                                            name="lastName" type="text"
+                                            required/>
+                                    </div>
+                                    <div className="col-md-3 form-control-comment">
+                                    </div>
+                                </div>
+                                <div className="form-group row ">
+                                    <label className="col-md-3 form-control-label required">
+                                    address
+                                    </label>
+                                    <div className="col-md-6">
+                                        <input 
+                                            value={this.state.address}
+                                            onChange={this.onChange} 
+                                            className="form-control" 
+                                            name="address" type="text"
+                                            required/>
+                                    </div>
+                                    <div className="col-md-3 form-control-comment">
+                                    </div>
+                                </div>
+                                <div className="form-group row ">
+                                    <label className="col-md-3 form-control-label required">
+                                    country
+                                    </label>
+                                    <div className="col-md-6">
+                                        <input 
+                                            value={this.state.country}
+                                            onChange={this.onChange} 
+                                            className="form-control" 
+                                            name="country" type="text"
+                                            required/>
+                                    </div>
+                                    <div className="col-md-3 form-control-comment">
+                                    </div>
+                                </div>
+                                <div className="form-group row ">
+                                    <label className="col-md-3 form-control-label required">
+                                    state
+                                    </label>
+                                    <div className="col-md-6">
+                                        <input 
+                                            value={this.state.state}
+                                            onChange={this.onChange} 
+                                            className="form-control" 
+                                            name="state" type="text"
+                                            required/>
+                                    </div>
+                                    <div className="col-md-3 form-control-comment">
+                                    </div>
+                                </div>
+                                <div className="form-group row ">
+                                    <label className="col-md-3 form-control-label required">
+                                        Email
+                                    </label>
+                                    <span className='text-danger'>{this.state.error}</span>
+                                    
+                                    <div className="col-md-6">
+                                        <input 
+                                            value={this.state.email} 
+                                            onChange={this.onChange} 
+                                            className="form-control" 
+                                            name="email"
+                                            type="email" 
+                                            required/>
+                                    </div>
+                                    <div className="col-md-3 form-control-comment">
+                                    </div>
+                                </div>
+                                <div className="form-group row ">
+                                    <label className="col-md-3 form-control-label required">
+                                        Password
+                                    </label>
+                                    <div className="col-md-6">
+                                    <div className="input-group js-parent-focus">
+                                        <input 
+                                            value={this.state.password}
+                                            onChange={this.onChange} 
+                                            className="form-control js-child-focus js-visible-password" 
+                                            name="password" 
+                                            type="password"
+                                            required/>
+                                        <span className="input-group-btn">
+                                            <button className="btn" type="button" data-action="show-password" data-text-show="Show" data-text-hide="Hide">
+                                            Show
+                                            </button>
+                                        </span>
+                                    </div>
+                                    </div>
+                                    <div className="col-md-3 form-control-comment">
+                                    </div>
+                                </div>      
+                                <div className="form-group row ">
+                                    <label className="col-md-3 form-control-label required">
+                                        Re Enter Password
+                                    </label>
+                                    <div className="col-md-6">
+                                    <div className="input-group js-parent-focus">
+
+                                    <input
+                                        value={this.state.repassword} 
+                                        onChange={this.onChange} 
+                                        className="form-control js-child-focus js-visible-password" 
+                                        name="repassword" 
+                                        type="password"
+                                        required/>
+
+                                    <span className="input-group-btn">
+                                        <button className="btn" type="button" data-action="show-password" data-text-show="Show" data-text-hide="Hide">
+                                          Show
+                                        </button>
+                                    </span>
+                                    </div>
+                                    </div>
+                                    <div className="col-md-3 form-control-comment">
+                                    </div>
+                                </div>                           
+                            </section>
+                            <footer className="form-footer clearfix">
+                                <input 
+                                    
+                                    type="hidden" 
+                                    name="submitCreate" value="1"/>
+                                <button className="btn btn-primary form-control-submit float-xs-right" data-link-action="save-customer" type="submit">
+                                    Save
+                                </button>
+                            </footer>
                         </form>
+                        </section>
                     </section>
                 </section>
+                </div>
+                </div>
+                </div>
+                </div>
             </main>
         )
     }
+}
+export default withRouter(register);
