@@ -3,15 +3,14 @@ import Header from './../component/Header'
 import Footer from './../component/Footer'
 import Register from './../pages/register'
 import Login from './../pages/login'
+import Home from './../pages/home'
  let routes = (
     <Router >
         <Header></Header>
             <Switch>
                 
                 <Route exact path='/'>
-
-                    home
-                    <div>test</div>
+                    <Home></Home>
                 </Route>
                 <Route path='/about'>
                     about
