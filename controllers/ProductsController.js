@@ -3,30 +3,30 @@ const Product=require('./../models/Product')
 class ProductsController{
     //index works fine
     static async index(req,res){
-        if(req.body.category_id){
-            // console.log(['category condition',req.body.category_id])
+        if(req.query.category_id){
+            // console.log(['category condition',req.query.category_id])
             //will start with page 1
-            let products = await Product.find({_id:req.body.category_id}).skip((req.body.page-1)*36).limit(36).exec()
+            let products = await Product.find({_id:req.query.category_id}).skip((req.query.page-1)*36).limit(36).exec()
 
             res.send({products})
         }
-        else if(req.body.product_search){
+        else if(req.query.product_search){
             if(product_search=='newst'){
                 // console.log('newst condition')
                 //will start with page 1
-                let products = await Product.find().sort({_id:-1}).skip((req.body.page-1)*36).limit(36).exec()
+                let products = await Product.find().sort({_id:-1}).skip((req.query.page-1)*36).limit(36).exec()
                 res.send({products})
             }
-            else if(req.body.product_search=='discounts'){
+            else if(req.query.product_search=='discounts'){
                 // console.log('discounts condition')
-                let products = await Product.find({discount:{$gt:0}}).sort({_id:-1}).skip((req.body.page-1)*36).limit(36).exec()
+                let products = await Product.find({discount:{$gt:0}}).sort({_id:-1}).skip((req.query.page-1)*36).limit(36).exec()
                 res.send({products})
             }
 
-            else if(req.body.product_search=='bestseller'){
+            else if(req.query.product_search=='bestseller'){
                 // console.log('bestseller condition')
                 //-1 will sort them in descending order
-                let products = await Product.find().sort({salesNumber:-1}).skip((req.body.page-1)*36).limit(36).exec()
+                let products = await Product.find().sort({salesNumber:-1}).skip((req.query.page-1)*36).limit(36).exec()
                 res.send({products})
             }
         }
@@ -38,7 +38,8 @@ class ProductsController{
     }
     //show works fine
     static async show(req,res){
-        let product = await Product.findOne({_id:req.body.id}).exec()
+        // console.log(req)
+        let product = await Product.findOne({_id:req.query.id}).exec()
         res.send(product)
     }
     //edit works fine

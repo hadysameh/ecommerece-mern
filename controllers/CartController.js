@@ -1,7 +1,7 @@
 const Cart  = require('./../models/Cart')
 class CartController{
     static async index(){
-        let cartProducts = await Cart.find().skip((req.body.page-1)*36).limit(36).exec()
+        let cartProducts = await Cart.find().skip((req.query.page-1)*36).limit(36).exec()
         res.json(cartProducts)
     }    
     static async store(){

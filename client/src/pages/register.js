@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import store from './../store/store'
 import { Route , Link,withRouter} from 'react-router-dom';
-import { setUser, setToken ,test} from './../store/userSlice'
+import { setUser, setToken } from './../store/userSlice'
 import axios from 'axios';
 class register extends Component{
     constructor(props) {

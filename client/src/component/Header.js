@@ -2,7 +2,7 @@ import MyAccountMenu from "./MyAccountMenu"
 export default function Header(){
     return (
         <div>
-            <div className="preloader loader" style={{display: "block"}}> <img src="image/loader.gif"  alt="#"/></div>
+            <div className="preloader loader" style={{display: "block"}}> <img src="/image/loader.gif"  alt="#"/></div>
 
             <header>
         <div className="header-top">
@@ -57,7 +57,7 @@ export default function Header(){
         <div className="container">
           <div className="header-inner">
             <div className="col-sm-3 col-xs-3 header-left">
-              <div id="logo"> <a href="index.html"><img src="image/logo.png" title="E-Commerce" alt="E-Commerce" className="img-responsive" /></a> </div>
+              <div id="logo"> <a href="index.html"><img src="/image/logo.png" title="E-Commerce" alt="E-Commerce" className="img-responsive" /></a> </div>
             </div>
             <div className="col-sm-9 col-xs-9 header-right">
               <div id="search" className="input-group">
@@ -74,7 +74,7 @@ export default function Header(){
                     <table className="table table-striped">
                       <tbody>
                         <tr>
-                          <td className="text-center"><a href="#"><img className="img-thumbnail" title="lorem ippsum dolor dummy" alt="lorem ippsum dolor dummy" src="image/product/7product56x72.jpg"/></a></td>
+                          <td className="text-center"><a href="#"><img className="img-thumbnail" title="lorem ippsum dolor dummy" alt="lorem ippsum dolor dummy" src="/image/product/7product56x72.jpg"/></a></td>
                           <td className="text-left"><a href="#">lorem ippsum dolor dummy</a></td>
                           <td className="text-right">x 1</td>
                           <td className="text-right">$254.00</td>
@@ -87,7 +87,7 @@ export default function Header(){
                     <table className="table table-striped">
                       <tbody>
                         <tr>
-                          <td className="text-center"><a href="#"><img className="img-thumbnail" title="lorem ippsum dolor dummy" alt="lorem ippsum dolor dummy" src="image/product/7product56x72.jpg"/></a></td>
+                          <td className="text-center"><a href="#"><img className="img-thumbnail" title="lorem ippsum dolor dummy" alt="lorem ippsum dolor dummy" src="/image/product/7product56x72.jpg"/></a></td>
                           <td className="text-left"><a href="#">lorem ippsum dolor dummy</a></td>
                           <td className="text-right">x 1</td>
                           <td className="text-right">$254.00</td>
@@ -100,7 +100,7 @@ export default function Header(){
                     <table className="table table-striped">
                       <tbody>
                         <tr>
-                          <td className="text-center"><a href="#"><img className="img-thumbnail" title="lorem ippsum dolor dummy" alt="lorem ippsum dolor dummy" src="image/product/7product56x72.jpg"/></a></td>
+                          <td className="text-center"><a href="#"><img className="img-thumbnail" title="lorem ippsum dolor dummy" alt="lorem ippsum dolor dummy" src="/image/product/7product56x72.jpg"/></a></td>
                           <td className="text-left"><a href="#">lorem ippsum dolor dummy</a></td>
                           <td className="text-right">x 1</td>
                           <td className="text-right">$254.00</td>

@@ -65,13 +65,13 @@ class UserController{
                             })
                         })
                         .catch(err=>{
-                            res.send(err)
+                            res.status(400).json(err)
                         }) 
                             
                         
                     }
                     else{
-                        res.json({
+                        res.status(400).json({
                             status:'please re-enter the correct password'
                         })
                     }

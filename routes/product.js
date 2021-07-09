@@ -5,8 +5,9 @@ const isAdmin=require('./../middelware/isAdmin')
 const upload = require('./../middelware/upload')
 
 
-
+//changed to query
 router.get('/product/',ProductsController.index)
+//changed to query
 router.get('/product/show/',ProductsController.show)
 router.patch('/product/edit/',[isAuth,isAdmin], upload.single('img'),ProductsController.edit)
 router.post('/product/store',[isAuth,isAdmin], upload.single('img'),ProductsController.store)

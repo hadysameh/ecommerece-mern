@@ -6,7 +6,7 @@ class CategoriesController{
         res.json(categories)
     }
     static async show(){
-        let category = await Category.findOne({_id:req.body.product_id}).exec()
+        let category = await Category.findOne({_id:req.query.product_id}).exec()
         res.send(category)
     }
     static async edit(){

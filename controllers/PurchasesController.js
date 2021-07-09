@@ -6,7 +6,7 @@ const {startSession} = require('mongoose')
 class PurchasesController{
     static async index(req,res){
 
-        let purchase = await Purchase.find().sort({_id:-1}).skip((req.body.page-1)*36).limit(36).exec()
+        let purchase = await Purchase.find().sort({_id:-1}).skip((req.query.page-1)*36).limit(36).exec()
         res.send({purchase})
     }
    

@@ -1,4 +1,4 @@
-import $ from 'jquery';
+
 export default function footer(props){
     return(
         <div>
