@@ -1,10 +1,10 @@
 const Cart  = require('./../models/Cart')
 class CartController{
-    static async index(){
-        let cartProducts = await Cart.find().skip((req.query.page-1)*36).limit(36).exec()
+    static async index(req,res){
+        let cartProducts = await Cart.find({user:req.user.id}).skip((req.query.page-1)*36).limit(36).exec()
         res.json(cartProducts)
     }    
-    static async store(){
+    static async store(req,res){
         let cartRecord = new Cart({
             product:req.body.product,
             user:req.user._id
@@ -14,7 +14,8 @@ class CartController{
         res.json(savedCartRecord)
 
     }
-    static async delete(){
+    static async delete(req,res){
+        // console.log(req)
         const removedCartRecord = await Cart.deleteOne({_id:req.body.id}).exec();
         res.json(removedCartRecord);
     }

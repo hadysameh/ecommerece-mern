@@ -3,7 +3,7 @@ const CartController=require('./../controllers/CartController')
 const isAuth=require('./../middelware/isAuth')
 
 //changed to query
-router.get('/cart/',CartController.index)
+router.get('/cart/',[isAuth],CartController.index)
 
 router.post('/cart/store',[isAuth],CartController.store)
 

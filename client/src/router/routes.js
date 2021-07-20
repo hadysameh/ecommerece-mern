@@ -4,6 +4,7 @@ import Footer from './../component/Footer'
 import Register from './../pages/register'
 import Login from './../pages/login'
 import Home from './../pages/home'
+import Cart from './../pages/cart'
 
 import Product from './../pages/product'
  let routes = (
@@ -17,7 +18,11 @@ import Product from './../pages/product'
 
                 <Route  exact path="/product/:id?"  >
                     <Product/>
-                </Route>             
+                </Route>   
+
+                <Route exact path='/cart'>
+                    <Cart/>
+                </Route>          
                 
                 <Route exact path='/about'>
                     about

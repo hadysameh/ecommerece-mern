@@ -3,7 +3,7 @@ export default function footer(props){
     return(
         <div>
             <div className="footer-top-cms parallax-container">
-                <div className="parallax"><img src="image/prlx.jpg" alt="#"/></div>
+                <div className="parallax"><img src="/image/prlx.jpg" alt="#"/></div>
                 <div className="container">
                     <div className="row">
                     <div className="newslatter">
@@ -32,16 +32,16 @@ export default function footer(props){
                 <h3 className="client-title">Favourite Brands</h3>
                 <h4 className="title-subline">The High Quality Products</h4>
                 <div id="brand_carouse" className="owl-carousel brand-logo">
-                    <div className="item text-center"> <a href="#"><img src="image/brand/brand1.png" alt="Disney" className="img-responsive" /></a> </div>
-                    <div className="item text-center"> <a href="#"><img src="image/brand/brand2.png" alt="Dell" className="img-responsive" /></a> </div>
-                    <div className="item text-center"> <a href="#"><img src="image/brand/brand3.png" alt="Harley" className="img-responsive" /></a> </div>
-                    <div className="item text-center"> <a href="#"><img src="image/brand/brand4.png" alt="Canon" className="img-responsive" /></a> </div>
-                    <div className="item text-center"> <a href="#"><img src="image/brand/brand5.png" alt="Canon" className="img-responsive" /></a> </div>
-                    <div className="item text-center"> <a href="#"><img src="image/brand/brand6.png" alt="Canon" className="img-responsive" /></a> </div>
-                    <div className="item text-center"> <a href="#"><img src="image/brand/brand7.png" alt="Canon" className="img-responsive" /></a> </div>
-                    <div className="item text-center"> <a href="#"><img src="image/brand/brand8.png" alt="Canon" className="img-responsive" /></a> </div>
-                    <div className="item text-center"> <a href="#"><img src="image/brand/brand9.png" alt="Canon" className="img-responsive" /></a> </div>
-                    <div className="item text-center"> <a href="#"><img src="image/brand/brand5.png" alt="Canon" className="img-responsive" /></a> </div>
+                    <div className="item text-center"> <a href="#"><img src="/image/brand/brand1.png" alt="Disney" className="img-responsive" /></a> </div>
+                    <div className="item text-center"> <a href="#"><img src="/image/brand/brand2.png" alt="Dell" className="img-responsive" /></a> </div>
+                    <div className="item text-center"> <a href="#"><img src="/image/brand/brand3.png" alt="Harley" className="img-responsive" /></a> </div>
+                    <div className="item text-center"> <a href="#"><img src="/image/brand/brand4.png" alt="Canon" className="img-responsive" /></a> </div>
+                    <div className="item text-center"> <a href="#"><img src="/image/brand/brand5.png" alt="Canon" className="img-responsive" /></a> </div>
+                    <div className="item text-center"> <a href="#"><img src="/image/brand/brand6.png" alt="Canon" className="img-responsive" /></a> </div>
+                    <div className="item text-center"> <a href="#"><img src="/image/brand/brand7.png" alt="Canon" className="img-responsive" /></a> </div>
+                    <div className="item text-center"> <a href="#"><img src="/image/brand/brand8.png" alt="Canon" className="img-responsive" /></a> </div>
+                    <div className="item text-center"> <a href="#"><img src="/image/brand/brand9.png" alt="Canon" className="img-responsive" /></a> </div>
+                    <div className="item text-center"> <a href="#"><img src="/image/brand/brand5.png" alt="Canon" className="img-responsive" /></a> </div>
                 </div>
                 </div>
                 <footer>
@@ -153,10 +153,10 @@ export default function footer(props){
                     <div className="footer-bottom-cms">
                         <div className="footer-payment">
                         <ul>
-                            <li className="mastero"><a href="#"><img alt="" src="image/payment/mastero.jpg"/></a></li>
-                            <li className="visa"><a href="#"><img alt="" src="image/payment/visa.jpg"/></a></li>
-                            <li className="currus"><a href="#"><img alt="" src="image/payment/currus.jpg"/></a></li>
-                            <li className="discover"><a href="#"><img alt="" src="image/payment/discover.jpg"/></a></li>
+                            <li className="mastero"><a href="#"><img alt="" src="/image/payment/mastero.jpg"/></a></li>
+                            <li className="visa"><a href="#"><img alt="" src="/image/payment/visa.jpg"/></a></li>
+                            <li className="currus"><a href="#"><img alt="" src="/image/payment/currus.jpg"/></a></li>
+                            <li className="discover"><a href="#"><img alt="" src="/image/payment/discover.jpg"/></a></li>
                         </ul>
                         </div>
                     </div>

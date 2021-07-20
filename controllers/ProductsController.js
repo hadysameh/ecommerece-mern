@@ -13,7 +13,7 @@ class ProductsController{
         else if(req.query.product_search){
             if(product_search=='newst'){
                 // console.log('newst condition')
-                //will start with page 1
+                //will start with page 1f
                 let products = await Product.find().sort({_id:-1}).skip((req.query.page-1)*36).limit(36).exec()
                 res.send({products})
             }

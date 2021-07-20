@@ -6,11 +6,22 @@ const Home = (props) => {
     const [products, setProducts] = useState([])
     useEffect(()=>{
         axios.get('/api/product/').then(res=>{
-            // console.log(res)
+            // console.log(res)1
             setProducts(res.data.products)
             // console.log(products)
         })
-    })
+    },[])
+    const handelAddToCart=(product)=>{
+        console.log(product)
+        axios.post('api/cart/store',{product})
+        .then((res)=>{
+            // console.log(res)
+            // history.push('/')
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+    }
 
     return (
         <div className='index'>
@@ -88,16 +99,16 @@ const Home = (props) => {
                                         <div className="image product-imageblock"> <Link to={'/product/'+product._id}> <img src={'http://localhost:5000/'+product.img} alt={product.name} title={product.name} className="img-responsive" /> <img src={'http://localhost:5000/'+product.img} alt="iPod Classic" title="iPod Classic" className="img-responsive" />  </Link>
                                             <ul className="button-group">
                                             <li>
-                                                <button type="button" className="wishlist" data-toggle="tooltip" data-placement="top" title="Add to Wish List" ><i className="fa fa-heart-o"></i></button>
+                                                {/* <button type="button" className="wishlist" data-toggle="tooltip" data-placement="top" title="Add to Wish List"  ><i className="fa fa-heart-o"></i></button> */}
                                             </li>
                                             <li>
-                                                <button type="button" className="compare" data-toggle="tooltip" data-placement="top" title="Compare this Product" ><i className="fa fa-exchange"></i></button>
+                                                {/* <button type="button" className="compare" data-toggle="tooltip" data-placement="top" title="Compare this Product" ><i className="fa fa-exchange"></i></button> */}
                                             </li>
                                             <li>
                                                 <button type="button" className="quick-view" data-toggle="tooltip" data-placement="top" title="Quick View" ><i className="fa fa-eye"></i></button>
                                             </li>
                                             <li>
-                                                <button type="button" className="addtocart-btn" title="Add to Cart"  > Add to Cart </button>
+                                                <button type="button" className="addtocart-btn" title="Add to Cart"  onClick={()=>{handelAddToCart(product)}}> Add to Cart </button>
                                             </li>
                                             </ul>
                                         </div>
