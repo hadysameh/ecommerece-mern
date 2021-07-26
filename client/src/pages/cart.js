@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom"
-
 import axios from 'axios'
 import React,{useState,useEffect} from 'react';
 
 const Cart = props => {
   const [cartData, setcartData] = useState([])
   const [totalPrice, settotalPrice] = useState(0)
+  
     const fetchCartData=()=>{
+      console.log('will fetch')
       axios.get('api/cart/')
       .then( (res)=>{
-          
-          setcartData(res.data)
+          let resCartData = res.data
+          setcartData(resCartData)
 
-          settotalPrice( cartData.reduce((a,b)=>parseFloat(b.product.price)+a,0) )
+          settotalPrice( resCartData.reduce((a,b)=>parseFloat(b.product.price)+a,0) )
 
-          // console.log(totalPrice)
+          console.log(res.data)
            
       }).catch(err=>{
         console.log(err)
@@ -29,11 +30,16 @@ const Cart = props => {
         fetchCartData()
       })
     }
+    
+
     useEffect(()=>{
+      
       fetchCartData()
-      settotalPrice( cartData.reduce((a,b)=>parseFloat(b.product.price)+a,0) )
-      // console.log(totalPrice)
-    },[cartData])
+      // settotalPrice( cartData.reduce((a,b)=>parseFloat(b.product.price)+a,0) )
+      
+    },[])
+  
+    
     return (
       <div>
         <div className="breadcrumb parallax-container">
@@ -120,6 +126,20 @@ const Cart = props => {
                   </table>
                 </div>
               </form>
+
+              <form action="payment" method="POST">
+                <script 
+                    src="//checkout.stripe.com/v2/checkout.js"
+                    className="stripe-button"
+                    data-key="<%= key %>"
+                    data-amount="2500"
+                    data-currency="inr"
+                    data-name="Crafty Gourav"
+                    data-description="Handmade Art and Craft Products"
+                    data-locale="auto" >
+                  </script>
+              </form>
+              
               <h2>What would you like to do next?</h2>
               
               
@@ -137,12 +157,25 @@ const Cart = props => {
               </div>
               <div className="buttons">
                 <div className="pull-left"><Link className="btn btn-default" to='/'>Continue Shopping</Link></div>
-                <div className="pull-right"><Link className="btn btn-primary" to=''>Checkout</Link></div>
+                <div  className="pull-right">
+                  
+                  
+                  <form action={process.env.REACT_APP_Server_url+"api/purchase/create-checkout-session"} method="POST">
+                    {/* {cartData.map(cartItem=>(
+                      <input type='hidden' name='cartItem' value={cartItem.product} />
+                    ))} */}
+                    {console.log(cartData)}
+                    <input type='hidden' name='cartData' value={JSON.stringify(cartData)} />
+                    <button type="submit"  className="btn btn-primary">
+                      Checkout
+                    </button>
+                  </form>
+                </div>
+                {/* <div className="pull-right"><Link className="btn btn-primary" to=''>Checkout</Link></div> */}
               </div>
             </div>
           </div>
-</div>
-   
+        </div>
       </div>
         );
 };

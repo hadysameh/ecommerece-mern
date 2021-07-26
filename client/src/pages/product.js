@@ -15,9 +15,9 @@ const Product = (props) => {
               }
         })
         .then(res=>{
-            console.log(res.data)
+            // console.log(res.data)
             setproductData(res.data)
-            console.log(productData.productName)
+            // console.log(productData.productName)
         })
     },[])
 

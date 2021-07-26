@@ -6,11 +6,26 @@ const mongoose = require('mongoose')
 const {initializeRoutes} = require('./routes/routesInitializer')
 
 const bodyParser = require('body-parser')
+
+const removeBPFromFullfillingOrders=(fn)=>{
+    return function(req, res, next) {
+        if (req.path === '/api/purchase/webhook' && req.method === 'POST') {
+            //here will go without adding bodyparser middleware
+            next();
+        } else {
+            //here wiil add the middleware by passing (req, res, next) to the bodyparser middelware
+            fn(req, res, next);
+        }
+    }
+}
+
+
+
 app.use(cors())
 
 app.use('/uploads',express.static('./uploads'));
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
+app.use(removeBPFromFullfillingOrders(bodyParser.urlencoded({extended: false})));
+app.use(removeBPFromFullfillingOrders(bodyParser.json()));
 
 app.get('/',(req,res)=>{
     res.send('hi you')

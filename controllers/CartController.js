@@ -1,6 +1,7 @@
 const Cart  = require('./../models/Cart')
 class CartController{
     static async index(req,res){
+        // console.log('will fetch')
         let cartProducts = await Cart.find({user:req.user.id}).skip((req.query.page-1)*36).limit(36).exec()
         res.json(cartProducts)
     }    

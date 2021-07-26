@@ -105,7 +105,7 @@ const Home = (props) => {
                                                 {/* <button type="button" className="compare" data-toggle="tooltip" data-placement="top" title="Compare this Product" ><i className="fa fa-exchange"></i></button> */}
                                             </li>
                                             <li>
-                                                <button type="button" className="quick-view" data-toggle="tooltip" data-placement="top" title="Quick View" ><i className="fa fa-eye"></i></button>
+                                                {/* <button type="button" className="quick-view" data-toggle="tooltip" data-placement="top" title="Quick View" ><i className="fa fa-eye"></i></button> */}
                                             </li>
                                             <li>
                                                 <button type="button" className="addtocart-btn" title="Add to Cart"  onClick={()=>{handelAddToCart(product)}}> Add to Cart </button>

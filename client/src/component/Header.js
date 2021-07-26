@@ -118,7 +118,7 @@ export default function Header(){
                          
                           <tr>
                             <td className="text-right"><strong>Total</strong></td>
-                            <td className="text-right">$254.00</td>
+                            <td className="text-right">{totalPrice}</td>
                           </tr>
                         </tbody>
                       </table>
